@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>{$eyou.field.seo_title}</title>
+<meta name="description" content="{$eyou.field.seo_description}" />
+<meta name="keywords" content="{$eyou.field.seo_keywords}" />
+<link href="{eyou:global name='web_ico' /}" rel="shortcut icon" type="image/x-icon" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta name="applicable-device" content="pc,wap">
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/font-awesome.min.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/bootstrap.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/owl.carousel.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/style.css">
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery-1.11.0.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/owl.carousel.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/app.js"></script>
+</head>
+<body>
+{eyou:include file='head.htm'/}
+<div class="banner text-center" style="background-image: url({eyou:global name='web_templets_pc' /}/skin/images/webabout.jpg)">
+  <div class="container">
+    <h1>{$eyou.field.typename}</h1>
+    <p class="lead">{$eyou.field.seo_description}</p>
+  </div>
+</div>
+<div class="section">
+  <div class="container">
+    <div class="about-text">
+      <h4>{$eyou.field.typename}</h4>
+      <div class="m-message"> {eyou:guestbookform type='default'}
+        <form method="POST" {$field.formhidden} action="{$field.action}" onsubmit="return checkForm();">
+          <label> <span>{$field.itemname_1}：</span>
+            <input class="inp" type="text" id='attr_1' name='{$field.attr_1}' value="" required>
+            <em>*</em> </label>
+          <label> <span>{$field.itemname_2}：</span>
+            <input class="inp" type="text" id='attr_2' name='{$field.attr_2}' value="" required>
+          </label>
+          <label> <span>{$field.itemname_3}：</span>
+            <input class="inp" type="tel" id='attr_3' name='{$field.attr_3}' value="" required>
+          </label>
+          <label> <span>{$field.itemname_4}：</span>
+            <input class="inp" type="tel" id='attr_4' name='{$field.attr_4}' value="" required>
+          </label>
+          <label> <span>{$field.itemname_5}：</span>
+            <input class="inp" type="text" id='attr_5' name='{$field.attr_5}' value="" required>
+          </label>
+          <label class="mes"> <span>{$field.itemname_6}：</span>
+            <textarea id='attr_6' name='{$field.attr_6}' required></textarea>
+          </label>
+          <div class="btn-1">
+            <input class="focus" type="submit" value="提交">
+          </div>
+          {$field.hidden}
+        </form>
+        {/eyou:guestbookform} </div>
+    </div>
+  </div>
+</div>
+{eyou:include file='footer.htm'/}
+</body>
+</html>

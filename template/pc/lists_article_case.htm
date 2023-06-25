@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>{$eyou.field.seo_title}</title>
+<meta name="description" content="{$eyou.field.seo_description}" />
+<meta name="keywords" content="{$eyou.field.seo_keywords}" />
+<link href="{eyou:global name='web_ico' /}" rel="shortcut icon" type="image/x-icon" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta name="applicable-device" content="pc,wap">
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/font-awesome.min.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/bootstrap.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/owl.carousel.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/style.css">
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery-1.11.0.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/owl.carousel.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/app.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/yh.js"></script>
+</head>
+<body>
+{eyou:include file='head.htm'/}
+<div class="banner text-center" style="background-image: url({eyou:global name='web_templets_pc' /}/skin/images/webcase.jpg)">
+  <div class="container">
+    <h1>{$eyou.field.typeid|gettoptype=###,'typename'}</h1>
+    <p class="lead">{$eyou.field.typeid}</p>
+  </div>
+</div>
+<div class="section">
+  <div class="container">
+    <div class="row clearfix" id="box"> {eyou:list pagesize='12'}
+      <div class="col col-md-3 col-sm-6 col-sm-12">
+        <div class="n_case"> <a href="{$field.arcurl}" target="_blank"> <img src="{$field.litpic}" alt="{$field.title}">
+          <div class="list_eye"> <span></span> </div>
+          </a> </div>
+      </div>
+      {/eyou:list} </div>
+    <div class="pages">
+      <div class="pagination">{eyou:pagelist listitem='index,end,pre,next,pageno' listsize='1'/}</div>
+    </div>
+  </div>
+</div>
+{eyou:include file='footer.htm'/}
+</body>
+</html>

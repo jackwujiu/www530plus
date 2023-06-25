@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>{$eyou.field.seo_title}</title>
+<meta name="description" content="{$eyou.field.seo_description}" />
+<meta name="keywords" content="{$eyou.field.seo_keywords}" />
+<link href="{eyou:global name='web_ico' /}" rel="shortcut icon" type="image/x-icon" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta name="applicable-device" content="pc,wap">
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/font-awesome.min.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/bootstrap.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/owl.carousel.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/style.css">
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery-1.11.0.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/owl.carousel.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/app.js"></script>
+</head>
+<body>
+{eyou:include file='head.htm'/}
+<div class="banner text-center" style="background-image: url({eyou:global name='web_templets_pc' /}/skin/images/webabout.jpg)">
+  <div class="container">
+    <h1>{$eyou.field.typename}</h1>
+    <p class="lead">{$eyou.field.seo_description}</p>
+  </div>
+</div>
+<div class="section">
+  <div class="container">
+    <div class="about-text"> {$eyou.field.content} </div>
+  </div>
+</div>
+<div class="features text-center clearfix">
+  <div class="item col-md-4" style="background-color: #fff;"> <i class="fa fa-map-marker"></i>
+    <h4>地址位置</h4>
+    <p>{eyou:global name='web_attr_3' /}</p>
+  </div>
+  <div class="item col-md-4" style="background-color: #465bb6;color: #fff;"> <i class="fa fa-qq"></i>
+    <h4>QQ交流</h4>
+    <p>技术QQ：{eyou:global name='web_attr_1' /}<br>
+      技术QQ：{eyou:global name='web_attr_1' /}</p>
+  </div>
+  <div class="item col-md-4" style="background-color: #f4f4f4;"> <i class="fa fa-phone-square"></i>
+    <h4>联系电话</h4>
+    <p>手机号码：{eyou:global name='web_attr_2' /}<br>
+      联系人：{eyou:global name='web_attr_5' /}</p>
+  </div>
+</div>
+<div class="section"> </div>
+{eyou:include file='footer.htm'/}
+</body>
+</html>

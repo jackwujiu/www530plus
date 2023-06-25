@@ -1,0 +1,97 @@
+<div class="space text-center">
+  <div class="container"> 如果您有任何疑问，可以点击此处与我们取得联系 <a href="http://wpa.qq.com/msgrd?v=3&uin={eyou:global name='web_attr_1' /}&site=qq&menu=yes" class="btn">点击QQ咨询</a> </div>
+</div>
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-4"> <a href="{eyou:global name='web_basehost' /}" class="logo"><img src="{eyou:global name='web_attr_9' /}" alt=""></a> </div>
+      {eyou:channelartlist typeid='3,4' currentstyle='on'}
+      <div class="col-md-2 col-sm-8 hidden-xs">
+        <h6>{eyou:field name='typename' /}</h6>
+        <ul>
+          {eyou:channel type='son'}
+          <li> <a href="{$field.typeurl}">{$field.typename}</a></li>
+          {/eyou:channel}
+        </ul>
+      </div>
+      {/eyou:channelartlist}
+      <div class="col-md-4 col-sm-12">
+        <h6>联系方式</h6>
+        <p>地址：{eyou:global name='web_attr_3' /}</p>
+        <a href="" class="btn"><i class="fa fa-phone"></i> 电话：{eyou:global name='web_attr_2' /}</a> </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <hr>
+      </div>
+      <div class="col-sm-6">{eyou:global name='web_copyright' /} {eyou:global name='web_recordnum' /}</div>
+      <div class="col-sm-6 hidden-xs"> 
+        <!--<div class="link">
+        友情链接：
+        {eyou:flink titlelen='80' row='24' type='text'}<a href="{$field.url}" target="_blank">{$field.title}</a> {/eyou:flink}
+        </div>--> 
+      </div>
+    </div>
+  </div>
+</div>
+<div class="search-pop"> <a href="javascript:;" class="close fa fa-times-circle"></a>
+  <div class="content" style="height: 100%;"> {eyou:searchform type='default'}
+    <form method="get" action="{$field.action}" onsubmit="return searchForm();" style="display: table;height: 100%;width: 100%;">
+      <div style="display: table-cell;vertical-align: middle;">
+        <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
+          <div class="ipt"> <i class="fa fa-search search-button" type="submit"></i>
+            <input type="text" value="输入关键词后 按Enter搜索" onFocus="if(this.value == '输入关键词后 按Enter搜索'){this.value=''}" onBlur="if(this.value ==''){this.value='输入关键词后 按Enter搜索'}" name="keywords" id="keywords"/>
+          </div>
+        </div>
+      </div>
+      {$field.hidden}
+    </form>
+    {/eyou:searchform} </div>
+</div>
+<div class="cndns-right hidden-xs">
+  <div class="cndns-right-meau meau-sev"> <a href="javascript:" class="cndns-right-btn"> <span class="fa fa-qq"></span>
+    <p>QQ咨询</p>
+    </a>
+    <div class="cndns-right-box">
+      <div class="box-border">
+        <div class="sev-t"> <span class="fa fa-comments"></span>
+          <p>QQ在线咨询<i>真诚为您提供专业解答服务</i></p>
+          <div class="clear"></div>
+        </div>
+        <div class="sev-b">
+          <ul class="clearfix">
+            <li><a href="http://wpa.qq.com/msgrd?v=3&uin={eyou:global name='web_attr_1' /}&site=qq&menu=yes">售前技术</a></li>
+            <li><a href="http://wpa.qq.com/msgrd?v=3&uin={eyou:global name='web_attr_1' /}&site=qq&menu=yes">售前技术</a></li>
+            <li><a href="http://wpa.qq.com/msgrd?v=3&uin={eyou:global name='web_attr_1' /}&site=qq&menu=yes">售后技术</a></li>
+            <li><a href="http://wpa.qq.com/msgrd?v=3&uin={eyou:global name='web_attr_1' /}&site=qq&menu=yes">售后技术</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cndns-right-meau meau-contact"> <a href="javascript:" class="cndns-right-btn"> <span class="fa fa-phone-square"></span>
+    <p> 咨询热线 </p>
+    </a>
+    <div class="cndns-right-box">
+      <div class="box-border">
+        <div class="sev-t clearfix"> <span class="fa fa-phone-square"></span>
+          <p>{eyou:global name='web_attr_2' /}<br />
+            <i>全天候技术服务热线</i></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cndns-right-meau meau-code"> <a href="javascript:" class="cndns-right-btn"> <span class="fa fa-wechat"></span>
+    <p>添加微信</p>
+    </a>
+    <div class="cndns-right-box">
+      <div class="box-border">
+        <div class="sev-t"><img src="{eyou:global name='web_attr_7' /}" alt="二维码" /><i>微信便捷交流</i></div>
+      </div>
+    </div>
+  </div>
+  <div class="cndns-right-meau meau-top" id="top-back"> <a href="javascript:" class="cndns-right-btn"> <span class="fa fa-angle-double-up"></span> <i>返回顶部</i> </a> </div>
+</div>
+<!-- 应用插件标签 start --> 
+{eyou:weapp type='default' /} 
+<!-- 应用插件标签 end -->

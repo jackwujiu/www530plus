@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>{$eyou.field.seo_title}</title>
+<meta name="description" content="{$eyou.field.seo_description}" />
+<meta name="keywords" content="{$eyou.field.seo_keywords}" />
+<link href="{eyou:global name='web_ico' /}" rel="shortcut icon" type="image/x-icon" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta name="applicable-device" content="pc,wap">
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/font-awesome.min.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/bootstrap.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/owl.carousel.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/style.css">
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery-1.11.0.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/owl.carousel.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/app.js"></script>
+</head>
+<body>
+{eyou:include file='head.htm'/}
+<div class="banner text-center" style="background-image: url({eyou:global name='web_templets_pc' /}/skin/images/webnew.jpg)">
+  <div class="container">
+    <h1>TAG标签</h1>
+    <p class="lead">tags</p>
+  </div>
+</div>
+<div class="section">
+  <div class="container">
+    <ul class="fenlei">
+      {eyou:channel type="first" id="field" currentstyle="on"}
+      <li class="{$field.currentstyle}"><a href="{$field.typeurl}">{$field.typename}</a></li>
+      {/eyou:channel}
+    </ul>
+    <div class="row news-list"> {eyou:list pagesize='5'}
+      <div class="col-sm-12"> <a href="{$field.arcurl}" class="item">
+        <div class="text">
+          <div class="date fl"> <span class="p1">{$field.add_time|MyDate='d',###}</span> <span class="p2">{$field.add_time|MyDate='Y-m',###}</span> </div>
+          <h4>{$field.title}</h4>
+          <div class="desc">{$field.seo_description|msubstr=###,0,300/2}...</div>
+        </div>
+        </a> </div>
+      {/eyou:list} </div>
+    <div class="pages text-center">
+      <div class="pagination">{eyou:pagelist listitem='index,end,pre,next,pageno' listsize='1'/}</div>
+    </div>
+  </div>
+</div>
+{eyou:include file='footer.htm'/}
+</body>
+</html>

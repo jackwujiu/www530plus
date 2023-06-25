@@ -1,0 +1,27 @@
+<div class="nav-bar clearfix">
+  <div class="nav-mobile-toggle"> <i class="fa fa-bars"></i> </div>
+  <div class="nav-logo">
+    <div class="pc_logo"> <a href="{eyou:global name='web_basehost' /}"> <img alt="{eyou:global name='web_attr_4' /}" class="logo logo-light" src="{eyou:global name='web_logo' /}"> </a> </div>
+    <div class="wap_logo"> <a href="{eyou:global name='web_basehost' /}"> <img src="{eyou:global name='web_attr_8' /}" /> </a> </div>
+  </div>
+  <div class="nav-menu">
+    <ul class="menu clearfix">
+      <li {eyou:eq name='$Request.param.m' value='Index'} class="on"{/eyou:eq}><a href="{eyou:global name='web_basehost' /}">网站首页</a></li>
+      {eyou:channel type="top" row='12' id="field" currentstyle="on"}
+      <li class="{$field.currentstyle}"><a href="{$field.typeurl}">{$field.typename}</a></li>
+      {/eyou:channel}
+    </ul>
+  </div>
+  <div class="nav-right"> <a href="http://wpa.qq.com/msgrd?v=3&uin={eyou:global name='web_attr_1' /}&site=qq&menu=yes" class="nav-function"> <i class="fa fa-qq"></i> <span>在线咨询</span> </a> </div>
+  <!-- <div class="nav-right nav-search">
+
+        <a href="javascript:;" class="search-trigger">
+
+            <i class="fa fa-search"></i>
+
+            <span>内容搜索</span>
+
+        </a>
+
+</div> --> 
+</div>

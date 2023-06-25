@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<title>{$eyou.field.seo_title}</title>
+<meta name="description" content="{$eyou.field.seo_description}" />
+<meta name="keywords" content="{$eyou.field.seo_keywords}" />
+<link href="{eyou:global name='web_ico' /}" rel="shortcut icon" type="image/x-icon" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta name="applicable-device" content="pc,wap">
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/font-awesome.min.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/bootstrap.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/owl.carousel.css">
+<link rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/style.css">
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/jquery-1.11.0.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/owl.carousel.min.js"></script>
+<script src="{eyou:global name='web_templets_pc' /}/skin/js/app.js"></script>
+</head>
+<body>
+{eyou:include file='head.htm'/}
+<div class="banner text-center" style="background-image: url({eyou:global name='web_templets_pc' /}/skin/images/webseo.jpg)">
+  <div class="container">
+    <h1>{$eyou.field.seotitle}</h1>
+    <p class="lead">{$eyou.field.seo_description}</p>
+  </div>
+</div>
+<div class="fuwushuo text-center clearfix">
+  <div class="col-md-6 hidden-sm hidden-xs" style="background-color: #fff;">
+    <div class="wrap">
+      <div class="inner"> <img src="{eyou:global name='web_templets_pc' /}/skin/images/webseo1.jpg" alt="" class="img"> </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="wrap">
+      <div class="inner">
+        <div class="bank"> <i class="fa fa-desktop"></i>
+          <h4>SEO优化服务</h4>
+          <p>您只需提供关键词，我们的专业团队将分析并提出优化建议，并给出相应的报价。一旦您的关键词成功上线并位于百度首页，我们将按月收费。</p>
+          <hr>
+          <h6>无需任何操作，坐等排名和询盘即可</h6>
+          <ul>
+            <li>上线后按月付费，更可靠</li>
+            <li>覆盖全国区域，24小时在线服务</li>
+            <li>稳定的排名和不断增长的咨询量<br>
+              ...</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6" style="background-color: #f8f8f8;">
+    <div class="wrap">
+      <div class="inner">
+        <div class="bank"> <i class="fa fa-server"></i>
+          <h4>增值服务</h4>
+          <p>我们提供的不仅仅是排名优化，还包括专业的数据分析、网站维护和技术支持服务，以达成长期的共赢合作关系</p>
+          <hr>
+          <h6>我们提供更多的服务，而不仅仅是排名</h6>
+          <ul>
+            <li>我们可以帮助您扩展更多的长尾关键词</li>
+            <li>我们会定期跟踪和分析客户流量情况</li>
+            <li>我们可以进行网页修改、调整和图片美工<br>
+              ...</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 hidden-sm hidden-xs" style="background-color: #fff;">
+    <div class="wrap">
+      <div class="inner"> <img src="{eyou:global name='web_templets_pc' /}/skin/images/webcon3.jpg" alt="" class="img"> </div>
+    </div>
+  </div>
+</div>
+<div class="section" style="background-color: #f4f4f4;">
+  <div class="container">
+    <div class="section-title">
+      <h3 class="text-center">我们所承接的网站SEO案例</h3>
+    </div>
+    <div id="box"> </div>
+    <div id="data_item">
+      <div class="owl-carousel owl-case"> {eyou:arclist typeid='3' row='20' titlelen='60'}
+        <div class="owl-item">
+          <div class="n_case item"> <a href="{$field.arcurl}" target="_blank"> <img src="{$field.litpic}" alt="{$field.title}">
+            <div class="list_eye"><span></span></div>
+            </a> </div>
+        </div>
+        {/eyou:arclist} </div>
+    </div>
+  </div>
+</div>
+{eyou:include file='footer.htm'/}
+</body>
+</html>
